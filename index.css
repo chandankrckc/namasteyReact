@@ -69,3 +69,10 @@ h3 ,h4 {
     display: flex;
     flex-wrap: wrap;
 }
+
+.login {
+    cursor: pointer;
+    margin-right: 10px;
+    height: 45px;
+    width: 90px;
+}

@@ -22,7 +22,9 @@ const Body = () => {
         console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         setListOfRestaurant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     }
+
     
+    //conditional rendering
     if(listOfRestaurants.length === 0)
     {
         return <Shimmer/>;
@@ -41,7 +43,7 @@ const Body = () => {
             </div>
             <div className="restCard">
             {listOfRestaurants.map((restaurant , index) => (
-            <RestaurantCard key = {index} resData = {restaurant}/>
+            <RestaurantCard key = {restaurant.info.id} resData = {restaurant}/>
             ))}
             </div>
         </div>

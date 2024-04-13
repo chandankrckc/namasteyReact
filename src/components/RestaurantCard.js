@@ -9,6 +9,7 @@ const RestaurantCard = (props) =>{
             className="food-image"
             src={CDN_URL + props.resData.info.cloudinaryImageId}
             />
+            
             <h3>{props.resData.info.name}</h3>
             <h4>{props.resData.info.cuisines.join(", ")}</h4>
             <h4>Rating : {props.resData.info.avgRating}</h4>
