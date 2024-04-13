@@ -6,12 +6,20 @@ import Shimmer from "./shimmer";
 const Body = () => {
 
     //Local State Variable
+    //never create useState outside the component
+    //never create your useState inside an if/else or forloop or a functions
+    //write useState at the top of your component
     const [listOfRestaurants , setListOfRestaurant] = useState([]);
     const [filteredRestaurant , setFilteredRestaurant] = useState([]);
     
     const [searchText , setSearchText] = useState("");
 
-    //Whenever a state variable changes , react re renders the  component
+    //Whenever a state variable changes , react re-renders the  component
+
+    //if no dependency array is provided as parameter , then useEffect() is called on every render
+    //if dependency array is provided then useEffect() is called once and only on initial render
+    //if we put something inside the dependency array then it will only be called when the dependency changes
+    //e.g if dependency array is [btnName] , then every time btnname changes this useEffect will be called
 
     useEffect(() => {
         fetchData();
@@ -53,7 +61,7 @@ const Body = () => {
                 <button className="filter-btn" onClick={() => {
                     //console.log(listOfRestaurants);
                     const filteredList = listOfRestaurants.filter((res) => res.info.avgRating >= 4.5);
-                    setListOfRestaurant(filteredList);
+                    setFilteredRestaurant(filteredList);
                 }}
                 >Top Rated Restaurant</button>
             </div>
