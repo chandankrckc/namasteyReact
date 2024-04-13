@@ -56,6 +56,7 @@ h3, h4 {
 .filter-btn {
   cursor: pointer;
   margin: 10px;
+  display: flex;
 }
 
 .shimmer-card {
@@ -75,5 +76,13 @@ h3, h4 {
   width: 90px;
   height: 45px;
   margin-right: 10px;
+}
+
+.search-button {
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
